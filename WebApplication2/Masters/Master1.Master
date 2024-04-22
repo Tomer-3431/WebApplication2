@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.Master.cs" Inherits="WebApplication2.Pages.Site1" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title>Undertale Wiki</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../CSS/StyleSheet.css" rel="stylesheet" />
+    <link rel="icon" href="..\Images\undertale wiki logo.png" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="../Scripts/NavBar.js"></script>
+    <script src="../Scripts/Music.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+ <nav class="navbar navbar-inverse" style="margin-bottom: 5px;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="Homepage.aspx" style="padding: 0px; margin-right: 10px; margin-left: 0px;">
+              <img src="..\Images\undertale wiki logo.png"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li id="home"><a href="Homepage.aspx">Home</a></li>
+            <li id="about"><a href="About.aspx">About</a></li>
+            <li id="credits"><a href="Credits.aspx">Credits</a></li>
+            <li id="management" style="display: none;"><a href="Management.aspx">Management</a></li>
+            <li id="hello" style="text-align: center; color: white; top: 15px; left: 10px;">Welcome: <%=Session["inputUserName"] %></li>
+          </ul>
+            
+          <form action="Login.aspx" id="login">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button class="btn btn-outline-success" id="loginName" type="submit" style="color: white; background-color: #333333; border-color: green; top: 7px; position: relative;">
+                        Login
+                    </button>
+                </li>
+            </ul>
+          </form>
+
+          <form action="Register.aspx" id="register" hidden>
+              <ul class="nav navbar-nav navbar-right">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li>
+                      <button class="btn btn-outline-success"  id="registerName" type="submit" style="color: white; background-color: #333333; border-color: green; top: 7px; position: relative;">
+                          Register
+                      </button>
+                  </li>
+              </ul>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right" style="position: relative; right: 50px; height: 50px">
+                <li>
+                    <button style="border: 0px; background: none;" onclick="changeSide();" hidden="hidden" id="tapeButton"><img src="../Images/celeste tape A.png" style="max-height: 5em; max-width: 5em;" id="tape"/></button>
+                </li>  
+                <li>
+                    <asp:ContentPlaceHolder id="music" runat="server"></asp:ContentPlaceHolder>
+                </li>
+         </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container-fluid text-center">    
+      <div class="row content">
+        <div class="col-sm-2 sidenav background-gray links-white" style="padding-top: 8px;">
+            <p><a href="Flowey.aspx">Flowey</a></p>
+            <p><a href="Torial.aspx">Toriel</a></p>
+            <p><a href="Sans.aspx">Sans</a></p>
+            <p><a href="Papyrus.aspx">Papyrus</a></p>
+            <p><a href="Undyne.aspx">Undyne</a></p>
+            <p><a href="Alphys.aspx">Alphys</a></p>
+            <p><a href="Mettaton.aspx">Mettaton</a></p>
+            <p><a href="Asgore.aspx">Asgore</a></p>
+            <p><a href="Asriel.aspx">Asriel</a></p>
+            <p><a href="Frisk.aspx">Frisk</a></p>
+            <p><a href="Chara.aspx">Chara</a></p>
+            <p><a href="Neutral_Route.aspx">Neutral Route</a></p>
+            <p><a href="True_Pacifist_Route.aspx">True Pacifist Route</a></p>
+            <p><a href="Genocide_Route.aspx">Genocide Route</a></p>
+            <p><a href="WD Gaster.aspx">W.D Gaster</a></p>
+        </div>
+
+        <div class="col-sm-8 text-left">
+            <asp:ContentPlaceHolder id="text" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <div class="col-sm-2 sidenav background-gray content-place">
+          <div class="well">
+            <asp:ContentPlaceHolder ID="content1" runat="server"></asp:ContentPlaceHolder>
+          </div>
+          <div class="well">
+            <asp:ContentPlaceHolder ID="content2" runat="server"></asp:ContentPlaceHolder>
+          </div>
+          <div class="well">
+            <asp:ContentPlaceHolder ID="content3" runat="server"></asp:ContentPlaceHolder>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center links-white" style="margin-top: 5px">
+      <p>
+        Hello my name is Tomer Katz and this is my website pls contact me<br />
+        <a href="https://tomer10.katz@gmail.com"><i class="bi bi-envelope-fill"></i> Gmail:  tomer10.katz@gmail.com</a> &nbsp;&nbsp;&nbsp;
+        <a href="https://wa.me/0584171008"><i class="bi bi-telephone-fill"></i> Phone: 058-4171008</a> &nbsp;&nbsp;&nbsp;
+        <a href="https://discordapp.com/users/675306776274534420"><i class="bi bi-discord"></i>  Discord: tomer_katz</a><br />
+        everything is copyright <i class="bi bi-c-circle-fill"></i> &nbsp; because I says so and you don't want to make me sad <br />
+        <i class="bi bi-emoji-smile-upside-down-fill"></i>
+      </p>
+      <p>
+          number of poeple visited the site: <%=Application["count"] %>
+      </p>
+    </footer>
+        
+</body>
+</html>

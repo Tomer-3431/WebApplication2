@@ -1,0 +1,407 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB935A85-23E1-4EE4-A309-4BD9554FBD41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44342</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Audio\Alphys.mp3" />
+    <Content Include="Audio\An Ending.mp3" />
+    <Content Include="Audio\ASGORE.mp3" />
+    <Content Include="Audio\Battle Against A True Hero.mp3" />
+    <Content Include="Audio\Bonetrousle.mp3" />
+    <Content Include="Audio\Bring It In, Guys!.mp3" />
+    <Content Include="Audio\Chara theme.mp3" />
+    <Content Include="Audio\Death By Glamour.mp3" />
+    <Content Include="Audio\Dogsong.mp3" />
+    <Content Include="Audio\Dummy!.mp3" />
+    <Content Include="Audio\Finale.mp3" />
+    <Content Include="Audio\Ghost Fight.mp3" />
+    <Content Include="Audio\Heartache.mp3" />
+    <Content Include="Audio\His Theme.mp3" />
+    <Content Include="Audio\Home.mp3" />
+    <Content Include="Audio\Hopes And Dreams.mp3" />
+    <Content Include="Audio\MEGALOVANIA.mp3" />
+    <Content Include="Audio\Memory.mp3" />
+    <Content Include="Audio\Once Upon a Time.mp3" />
+    <Content Include="Audio\Power Of _NEO_.mp3" />
+    <Content Include="Audio\sans..mp3" />
+    <Content Include="Audio\SAVE The World.mp3" />
+    <Content Include="Audio\Spear of Justice.mp3" />
+    <Content Include="Audio\Spider Dance.mp3" />
+    <Content Include="Audio\Determination.mp3" />
+    <Content Include="Audio\Stronger Monsters.mp3" />
+    <Content Include="Audio\st_him.mp3" />
+    <Content Include="Audio\Anticipation.mp3" />
+    <Content Include="Audio\Undertale.mp3" />
+    <Content Include="Audio\Your Best Friend.mp3" />
+    <Content Include="Audio\Your Best Nightmare.mp3" />
+    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="Images\About\undertale plushies.jpg" />
+    <Content Include="Images\About\undertale poster.jpg" />
+    <Content Include="Images\About\undertale poster2.jpg" />
+    <Content Include="Images\Alphys\Alphys.png" />
+    <Content Include="Images\Asgore\Asgore art.jpg" />
+    <Content Include="Images\Asgore\Asgore Sprite.jpg" />
+    <Content Include="Images\Asriel\Asriel.jpg" />
+    <Content Include="Images\celeste tape A.png" />
+    <Content Include="Images\celeste tape B.png" />
+    <Content Include="Images\Chara\Chara art.png" />
+    <Content Include="Images\Chara\Chara sprite.png" />
+    <Content Include="Images\Chara\Chara.jpg" />
+    <Content Include="Images\Credits\another poster.jpg" />
+    <Content Include="Images\Credits\buttons.png" />
+    <Content Include="Images\Credits\undertale peoples.jpg" />
+    <Content Include="Images\FLowey\FLowey 3d.png" />
+    <Content Include="Images\FLowey\Flowey Angry.jpg" />
+    <Content Include="Images\FLowey\Photoshop Flowey.gif" />
+    <Content Include="Images\Frisk\frisk art.png" />
+    <Content Include="Images\Frisk\Frisk.jpg" />
+    <Content Include="Images\Genocide Route\chara meets sans.jpg" />
+    <Content Include="Images\Genocide Route\sans death.jpg" />
+    <Content Include="Images\home page\undertale wiki logo jpeg.jpg" />
+    <Content Include="Images\home page\undertale with everyone logo.jpg" />
+    <Content Include="Images\home page\undertale kickstarter banner.jpg" />
+    <Content Include="Images\mettaton\Mettaton art.jpg" />
+    <Content Include="Images\mettaton\mettaton face.jpg" />
+    <Content Include="Images\mettaton\Mettaton sprite.png" />
+    <Content Include="Images\Neutral Route\Sans calling.png" />
+    <Content Include="Images\Papyrus\papyrus and Sans.png" />
+    <Content Include="Images\Papyrus\papyrus.png" />
+    <Content Include="Images\Sans\Gaster blaster.jpg" />
+    <Content Include="Images\Sans\Sans Blue eye.jpg" />
+    <Content Include="Images\Sans\Sans.png" />
+    <Content Include="Images\Torial\Torial bakes pie.jpg" />
+    <Content Include="Images\Torial\Torial colored.png" />
+    <Content Include="Images\True Pacifist Route\everyone.png" />
+    <Content Include="Images\True Pacifist Route\pacifist menu.png" />
+    <Content Include="Images\undertale wiki logo.png" />
+    <Content Include="Images\Undyne\Undyne armor.png" />
+    <Content Include="Images\Undyne\undyne the undying.jpg" />
+    <Content Include="Images\Undyne\Undyne.jpg" />
+    <Content Include="Images\WD Gaster\Gaster.jpg" />
+    <Content Include="Images\WD Gaster\W.D Gaster.jpg" />
+    <Content Include="Pages\Credits.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Logout.aspx" />
+    <Content Include="Pages\Management.aspx" />
+    <Content Include="Pages\Error.aspx" />
+    <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\Music.js" />
+    <Content Include="Scripts\Register.js" />
+    <Content Include="Scripts\NavBar.js" />
+    <Content Include="Pages\Homepage.aspx" />
+    <Content Include="Pages\Chara.aspx" />
+    <Content Include="Pages\Neutral_Route.aspx" />
+    <Content Include="Pages\True_Pacifist_Route.aspx" />
+    <Content Include="Pages\Genocide_Route.aspx" />
+    <Content Include="Pages\Papyrus.aspx" />
+    <Content Include="Pages\Undyne.aspx" />
+    <Content Include="Pages\Alphys.aspx" />
+    <Content Include="Pages\Mettaton.aspx" />
+    <Content Include="Pages\Asgore.aspx" />
+    <Content Include="Pages\Asriel.aspx" />
+    <Content Include="Pages\Frisk.aspx" />
+    <Content Include="Pages\Sans.aspx" />
+    <Content Include="Pages\Torial.aspx" />
+    <Content Include="Pages\Flowey.aspx" />
+    <Content Include="Pages\WD Gaster.aspx" />
+    <Content Include="Pages\About.aspx" />
+    <Content Include="Pages\Register.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\Credits.aspx.cs">
+      <DependentUpon>Credits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Credits.aspx.designer.cs">
+      <DependentUpon>Credits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Chara.aspx.cs">
+      <DependentUpon>Chara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Chara.aspx.designer.cs">
+      <DependentUpon>Chara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Neutral_Route.aspx.cs">
+      <DependentUpon>Neutral_Route.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Neutral_Route.aspx.designer.cs">
+      <DependentUpon>Neutral_Route.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Master2.Master.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\Master2.Master.designer.cs">
+      <DependentUpon>Master2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\True_Pacifist_Route.aspx.cs">
+      <DependentUpon>True_Pacifist_Route.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\True_Pacifist_Route.aspx.designer.cs">
+      <DependentUpon>True_Pacifist_Route.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Genocide_Route.aspx.cs">
+      <DependentUpon>Genocide_Route.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Genocide_Route.aspx.designer.cs">
+      <DependentUpon>Genocide_Route.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Papyrus.aspx.cs">
+      <DependentUpon>Papyrus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Papyrus.aspx.designer.cs">
+      <DependentUpon>Papyrus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Undyne.aspx.cs">
+      <DependentUpon>Undyne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Undyne.aspx.designer.cs">
+      <DependentUpon>Undyne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Alphys.aspx.cs">
+      <DependentUpon>Alphys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Alphys.aspx.designer.cs">
+      <DependentUpon>Alphys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Mettaton.aspx.cs">
+      <DependentUpon>Mettaton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Mettaton.aspx.designer.cs">
+      <DependentUpon>Mettaton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Asgore.aspx.cs">
+      <DependentUpon>Asgore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Asgore.aspx.designer.cs">
+      <DependentUpon>Asgore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Asriel.aspx.cs">
+      <DependentUpon>Asriel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Asriel.aspx.designer.cs">
+      <DependentUpon>Asriel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Frisk.aspx.cs">
+      <DependentUpon>Frisk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Frisk.aspx.designer.cs">
+      <DependentUpon>Frisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sans.aspx.cs">
+      <DependentUpon>Sans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sans.aspx.designer.cs">
+      <DependentUpon>Sans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Torial.aspx.cs">
+      <DependentUpon>Torial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Torial.aspx.designer.cs">
+      <DependentUpon>Torial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Flowey.aspx.cs">
+      <DependentUpon>Flowey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Flowey.aspx.designer.cs">
+      <DependentUpon>Flowey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WD Gaster.aspx.cs">
+      <DependentUpon>WD Gaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WD Gaster.aspx.designer.cs">
+      <DependentUpon>WD Gaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Masters\Master1.Master" />
+    <Content Include="Masters\Master2.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51756</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44342/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
