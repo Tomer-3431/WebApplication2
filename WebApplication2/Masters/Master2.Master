@@ -65,7 +65,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             <li id="hello" style="text-align: center; color: white; top: 7px; position: relative;">
-                    Welcome: <%=Session["inputUserName"] %>
+                    Welcome: <%=Session["userName"] %>
 
             </li>
 

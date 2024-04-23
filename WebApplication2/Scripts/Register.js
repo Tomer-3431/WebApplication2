@@ -24,7 +24,7 @@ function clearRegister() {
 }
 
 function clearLogin() {
-    var msges = ["UserName", "Password"]
+    var msges = ["UserName", "Email", "Password"]
 
     for (let i = 0; i < msges.length; i++) {
         document.getElementById("msg" + msges[i]).innerHTML = "";
@@ -173,7 +173,7 @@ function checkForm() {
 
 }
 
-function login() {
+function checkLogin() {
     clearLogin();
 
     var msg = "";
@@ -197,6 +197,20 @@ function login() {
         fault = "Password";
     }
 
+    var shtrudel = document.getElementById("inputEmail").value.indexOf('@');
+    if (document.getElementById("inputEmail").value.length == 0) {
+        msg = "Enter a Email";
+        fault = "Email";
+    } else if (shtrudel == -1) {
+        msg = "Enter a @";
+        fault = "Email";
+    } else if (document.getElementById("inputEmail").value.length - 1 == shtrudel) {
+        msg = "You can not end the email with a @";
+        fault = "Email";
+    } else if (shtrudel == 0) {
+        msg = "you cant start the email with a @";
+        fault = "Email";
+    }
 
     if (document.getElementById("inputUserName").value.length == 0) {
         msg = "Enter a User Name";

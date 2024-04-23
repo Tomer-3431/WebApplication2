@@ -57,6 +57,26 @@
 
             <tr>
                 <td>
+                    <label for="inputEmail" class="form-label">Email</label>
+                </td>
+                <td></td>
+                <td>
+                    <input type="Text" class="form-control" id="inputEmail" name="inputEmail" placeholder="example@gmail.com">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td></td> <td></td>
+                <td>
+                    <label id="msgEmail" class="form-text" style="color: red;"></label>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
                     <label for="inputPassword" class="form-label">Password</label>
                 </td>
                 <td></td>
@@ -79,7 +99,7 @@
 
             <tr>
                 <td> 
-                    <button id="loginSubmit" name="loginSubmit" type="submit" class="btn btn-primary btn-lg" onclick="return login();" aria-pressed="true">login</button>
+                    <button id="loginSubmit" name="loginSubmit" type="submit" class="btn btn-primary btn-lg" onclick="return checkLogin();" aria-pressed="true">login</button>
                 </td>
                 <td>
                     &nbsp;
@@ -89,6 +109,9 @@
 
         </table>
     </form>
+    <h3>
+        <% =msg %>
+    </h3>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">

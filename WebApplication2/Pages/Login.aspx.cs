@@ -1,44 +1,49 @@
 ﻿using System;
+using System.Data;
+using WebApplication2.appStart;
 
 namespace WebApplication2.Pages
 {
     public partial class Login : System.Web.UI.Page
     {
+        public string msg = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.Form["loginSubmit"] != null)
-            //if (IsPostBack)
-            //if (Session["loginSubmit"] !=  null)
             {
-                string userName = Request.Form["inputUserName"];
-                string password = Request.Form["inputPassword"];
+                string fileName = "usersDB.mdf";
+                string tableName = "userTable";
+                string sqlSelect = $"select * from {tableName} where userName=" + "'" + Request.Form["inputUserName"] + "'";
 
-                if (userName == "Admin123" && password == "Admin1234")
-                {
-                    Session["inputUserName"] = "Admin123";
-                    Session["inputFirstName"] = "Admin";
-                    Session["login"] = "true";
-                    Application["count"] = (int)Application["count"] + 1;
-                    Response.Redirect("Management.aspx");
-
-                }
-                else if (userName == "Tomer1234" && password == "Q1w2e3r4")
-                {
-                    Session["inputUserName"] = "Tomer1234";
-                    Session["inputFirstName"] = "Tomer";
-                    Session["login"] = "true";
-                    Application["count"] = (int)Application["count"] + 1;
-                    Response.Redirect("Homepage.aspx");
-
-                }
+                DataTable table = Helper.executeDataTable(fileName, sqlSelect);
+                int length = table.Rows.Count;
+                if (length == 0)
+                    msg = "wrong username or password ir email";
                 else
                 {
-                    Session["inputUserName"] = "guest";
-                    Session["inputFirstName"] = "guest";
-                    Session["login"] = "false";
-                    Response.Redirect("Homepage.aspx");
-
+                    string password = (string)(table.Rows[0]["password"]);
+                    password = password.Trim();
+                    string email = (string)(table.Rows[0]["email"]);
+                    email = email.Trim();
+                    if (password.Equals(Request.Form["inputPassword"]) && email.Equals(Request.Form["inputEmail"]))
+                    {
+                        Session["userName"] = Request.Form["inputUserName"];
+                        if (Convert.ToBoolean(table.Rows[0]["isAdmin"]))
+                        {
+                            Session["rank"] = "Admin";  
+                            Response.Redirect("Management.aspx");
+                        } else
+                        {
+                            Session["rank"] = "user";
+                            Response.Redirect("Homepage.aspx");
+                        }
+                    }
+                    else
+                    {
+                        msg = "wrong username or password or email";
+                    }
                 }
+
             }
         }
     }

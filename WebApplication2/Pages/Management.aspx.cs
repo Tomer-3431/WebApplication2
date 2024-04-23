@@ -6,13 +6,7 @@ namespace WebApplication2.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Session["inputFirstName"] == "Admin" && Session["inputUserName"] == "Admin123"))
-            {
-                Session["inputUserName"] = "guest";
-                Session["inputFirstName"] = "guest";
-            }
-
-            if (Session["inputUserName"] == "guest" && Session["inputFirstName"] == "guest")
+            if (Session["rank"] != "Admin")
             {
                 Response.Redirect("Error.aspx");
             }

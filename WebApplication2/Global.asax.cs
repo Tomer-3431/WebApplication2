@@ -13,9 +13,8 @@ namespace WebApplication2.Pages
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            Session["inputUserName"] = "guest";
-            Session["inputFirstName"] = "guest";
-            Session["login"] = "false";
+            Session["rank"] = "guest";
+            Session["userName"] = "guest";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -35,8 +34,8 @@ namespace WebApplication2.Pages
 
         protected void Session_End(object sender, EventArgs e)
         {
-            Session["inputUserName"] = "guest";
-            Session["inputFirstName"] = "guest";
+            Session["rank"] = "guest";
+            Session["userName"] = "guest";
         }
 
         protected void Application_End(object sender, EventArgs e)

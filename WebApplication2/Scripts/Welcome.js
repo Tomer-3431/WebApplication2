@@ -20,12 +20,14 @@
 
 function logout() {
     document.getElementById("login").action = "Logout.aspx";
+    document.getElementById("loginName").href = "Logout.aspx";
     document.getElementById("loginName").innerHTML = "Logout";
     document.getElementById("register").style.display = "none";
 }
 
 function login() {
     document.getElementById("login").action = "Login.aspx";
+    document.getElementById("loginName").href = "Login.aspx";
     document.getElementById("loginName").innerHTML = "Login";
     document.getElementById("register").style.display = "";
 }
