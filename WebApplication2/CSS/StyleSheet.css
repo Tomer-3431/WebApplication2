@@ -59,3 +59,8 @@ footer {
         height: auto;
     }
 }
+
+.checkList {
+    position: relative;
+    left: 9px;
+}

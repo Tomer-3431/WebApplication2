@@ -13,7 +13,7 @@
 
 function clearRegister() {
 
-    var msges = ["UserName", "FirstName", "Email", "Address", "Phone", "Password", "PasswordCheck"];
+    var msges = ["UserName", "Email", "Address", "Phone", "DateBorn", "Password", "PasswordCheck"];
 
     for (let i = 0; i < msges.length; i++) {
         document.getElementById("msg" + msges[i]).innerHTML = "";
@@ -69,6 +69,22 @@ function validatePassordNumber(password){
     return false;
 }
 
+// Define a JavaScript function called calculate_age with parameter dob (date of birth)
+function calculateAge(dateBirth) {
+    // Calculate the difference in milliseconds between the current date and the provided date of birth
+    var diffMS = Date.now() - dateBirth.getTime();
+    // Create a new Date object representing the difference in milliseconds and store it in the variable age_dt (age Date object)
+    var ageDate = new Date(diffMS);
+
+    // Calculate the absolute value of the difference in years between the age Date object and the year 1970 (UNIX epoch)
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+function getDateFromString(text) {
+    text = text.slice(0, 4) + ((parseInt(text[4]) + 1).toString()) + text.slice(-5);
+    return new Date(text);
+}
+
 function checkForm() {
     var msg = "";
     var fault = "";
@@ -96,10 +112,18 @@ function checkForm() {
         fault = "Password";
     }
 
+    if (document.getElementById("inputDateBorn").value.length == 0) {
+        msg = "Enter the date of your birth";
+        fault = "DateBorn";
+    } else if (calculateAge(getDateFromString(document.getElementById("inputDateBorn").value)) <= 12) {
+        msg = "You must be at least 12 years old";
+        fault = "DateBorn";
+    }
+
     if (document.getElementById("inputPhone").value.length == 0) {
         msg = "Enter your phone number";
         fault = "Phone";
-    } else if (document.getElementById("inputPhone").value.length != 9) {
+    } else if (document.getElementById("inputPhone").value.length != 10) {
         msg = "Invalide phone number";
         fault = "Phone";
     }
@@ -127,11 +151,6 @@ function checkForm() {
         fault = "Email";
     }
 
-    if (document.getElementById("inputFirstName").value.length == 0) {
-        msg = "Enter your First Name";
-        fault = "FirstName"
-    }
-
     if (document.getElementById("inputUserName").value.length == 0) {
         msg = "Enter a User Name";
         fault = "UserName";
@@ -148,7 +167,7 @@ function checkForm() {
         document.getElementById("msg"+fault).innerHTML = msg;
         return false;
     } else {
-        alert("everything is legul \nWelcome " + document.getElementById("inputUserName").value + " to the Undertale wiki")
+        // alert("everything is legul \nWelcome " + document.getElementById("inputUserName").value + " to the Undertale wiki")
         return true;
     }
 
