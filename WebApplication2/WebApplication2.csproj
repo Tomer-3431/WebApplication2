@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\usersDB.mdf" />
+    <Content Include="AppData\usersDB_log.ldf">
+      <DependentUpon>usersDB.mdf</DependentUpon>
+    </Content>
     <Content Include="CSS\StyleSheet.css" />
     <Content Include="Pages\Credits.aspx" />
     <Content Include="Global.asax" />
@@ -74,7 +78,7 @@
     <Content Include="Pages\Logout.aspx" />
     <Content Include="Pages\Management.aspx" />
     <Content Include="Pages\Error.aspx" />
-    <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\Welcome.js" />
     <Content Include="Scripts\Music.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\NavBar.js" />
@@ -103,6 +107,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStart\Helper.cs" />
     <Compile Include="Pages\Credits.aspx.cs">
       <DependentUpon>Credits.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

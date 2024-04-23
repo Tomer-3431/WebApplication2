@@ -1,17 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using WebApplication2.appStart;
 
 namespace WebApplication2.Pages
 {
     public partial class Register : System.Web.UI.Page
     {
+        public string msg = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            string fileName = "usersDB.mdf";
+            string tableName = "userTable";
+            if (Request.Form["registerSubmit"] != null)
+            //if(IsPostBack)
+            {
+                msg = "here";
+                string userName = Request.Form["inputUserName"];
+                string sqlSelect = "SELECT * FROM " + tableName + " WHERE userName = '" + userName + "'";
+                if (Helper.isExist(fileName, sqlSelect))
+                {
+                    msg = "user name has been taken";
+                }
+                else
+                {
+                    string email = Request.Form["inputEmail"];
+                    string address = Request.Form["inputAddress"];
+                    string gender = Request.Form["inputGender"];
+                    string phoneNum = Request.Form["inputPhone"];
+                    string dateBorn = Helper.fixDateFormat(Request.Form["inputDateBorn"]); 
+                    string password = Request.Form["inputPassword"];
+                    string isAdmin = Request.Form["inputAdmin"];
 
+                    string sqlInsert = "INSERT INTO " + tableName + " VALUES ('" + userName + "'," + "N'" + email + "'," + "N'" + address + "'," + "N'" + gender + "'," + "N'" + phoneNum + "'," + "N'" + dateBorn + "'," + "N'" + password + "'," + "N'" + isAdmin + "')";
+                    // string sqlInsert = "INSERT INTO " + tableName + " VALUES ('" + userName + "'," + "N'" + password + "')";
+                    Helper.doQuery(fileName, sqlInsert);
+                    msg = "user was added to DB";
+                }
+            }
         }
     }
 }
