@@ -1,40 +1,61 @@
 ﻿window.onload = function () {
     navbarActive();
 
-    if (document.getElementById("hello").innerHTML == "Welcome: guest" || document.getElementById("hello").innerHTML == '\n                    Welcome: guest\n\n            ') {
-        login();
+    if (getRank() == "guest") {
+        navBarLogin();
     } else {
-        logout();
+        navBarLogout();
     }        
 
-    if (document.getElementById("hello").innerHTML.includes("Admin")) {
-        display();
+    if (getRank() == "Admin") {
+        navBarDisplay();
     } else {
-        hide();
+        navBarHide();
     }
 
 }
 
-function logout() {
+function getRank() {
+
+    var rank = document.getElementById("rank").innerHTML;
+    switch (rank) {
+
+        case "Rank: guest":
+            return "guest";
+
+        case "Rank: user":
+            return "user";
+
+        case "Rank: Admin":
+            return "Admin"
+
+        default:
+            return "guest"
+    }
+}
+
+function navBarLogout() {
     document.getElementById("login").action = "Logout.aspx";
     document.getElementById("loginName").innerHTML = "Logout";
     document.getElementById("register").hidden = true;
 }
 
-function login() {
+function navBarLogin() {
     document.getElementById("login").action = "Login.aspx";
     document.getElementById("loginName").innerHTML = "Login";
     document.getElementById("register").hidden = false;
 }
 
-function hide() {
+function navBarHide() {
     document.getElementById("management").style.display = "none";
     document.getElementById("hello").style.color = "#FFFFFF";
+    document.getElementById("rank").style.color = "#FFFFFF";
 }
 
-    function display() {
-        document.getElementById("management").style.display = "";
+function navBarDisplay() {
+    document.getElementById("management").style.display = "";
     document.getElementById("hello").style.color = "#FFD700";
+    document.getElementById("rank").style.color = "#FFD700";
 }
 
 function navbarActive() {

@@ -68,6 +68,10 @@
                     Welcome: <%=Session["userName"] %>
 
             </li>
+            <li id="rank" style="text-align: center; color: white; top: 7px; position: relative; left: 20px;">
+                    Rank: <% =Session["rank"] %>
+
+            </li>
 
           </ul>
 

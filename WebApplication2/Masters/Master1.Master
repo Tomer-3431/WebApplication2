@@ -32,6 +32,7 @@
             <li id="credits"><a href="Credits.aspx">Credits</a></li>
             <li id="management" style="display: none;"><a href="Management.aspx">Management</a></li>
             <li id="hello" style="text-align: center; color: white; top: 15px; left: 10px;">Welcome: <%=Session["userName"] %></li>
+            <li id="rank" style="text-align: center; color: white; top: 15px; left: 32px;">Rank: <% = Session["rank"] %></li>
           </ul>
             
           <form action="Login.aspx" id="login">
