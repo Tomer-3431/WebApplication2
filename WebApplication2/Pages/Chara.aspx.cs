@@ -6,7 +6,7 @@ namespace WebApplication2.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["rank"] != "Admin" && Session["rank"] != "user")
+            if (Session["rank"].ToString() != "Admin" && Session["rank"].ToString() != "user")
             {
                 Response.Redirect("Error.aspx");
             }

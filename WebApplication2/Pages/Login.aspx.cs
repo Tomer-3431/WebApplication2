@@ -27,6 +27,7 @@ namespace WebApplication2.Pages
                     email = email.Trim();
                     if (password.Equals(Request.Form["inputPassword"]) && email.Equals(Request.Form["inputEmail"]))
                     {
+                        Application["Count"] = (int)Application["Coumt"] + 1;
                         Session["userName"] = Request.Form["inputUserName"];
                         if (Convert.ToBoolean(table.Rows[0]["isAdmin"]))
                         {

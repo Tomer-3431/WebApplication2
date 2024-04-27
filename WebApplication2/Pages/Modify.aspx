@@ -16,7 +16,7 @@
         </p>
     </div>
     <div>
-        <form name="managementForm" runat="server" class="row g-3" id="managementForm" style="
+        <form name="modifyForm" runat="server" class="row g-3" id="modifyForm" style="
         padding-right: 20px;
         padding-left: 20px;
         padding-top: 00px;
@@ -113,8 +113,8 @@
             </div>
 
             <div class="col-md-12 mb-3">
-                <button onclick="return checkForm();" name="managementSubmit" id="managementSubmit" type="submit" class="btn btn-primary btn-lg" aria-pressed="true" style="margin: 7px;" >Modify</button>
-                <button name="managementReset" id="managementReset" type="reset" class="btn btn-info btn-lg" aria-pressed="true" style="margin: 7px;" >Reset</button>
+                <button onclick="return checkForm();" name="modifySubmit" id="modifySubmit" type="submit" class="btn btn-primary btn-lg" aria-pressed="true" style="margin: 7px;" >Modify</button>
+                <button name="modifyReset" id="modifyReset" type="reset" class="btn btn-info btn-lg" aria-pressed="true" style="margin: 7px;" >Reset</button>
             </div>
         </form>
     </div>

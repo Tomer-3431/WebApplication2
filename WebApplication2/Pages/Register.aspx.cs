@@ -28,11 +28,20 @@ namespace WebApplication2.Pages
                     string address = Request.Form["inputAddress"];
                     string gender = Request.Form["inputGender"];
                     string phoneNum = Request.Form["inputPhone"];
-                    string dateBorn = Helper2.fixDateFormatSet(Request.Form["inputDateBorn"]); 
+                    string dateBorn = Request.Form["inputDateBorn"];
+                    string color = Request.Form["inputColor"];
                     string password = Request.Form["inputPassword"];
                     string isAdmin = Request.Form["inputAdmin"];
 
-                    string sqlInsert = "INSERT INTO " + tableName + " VALUES ('" + userName + "'," + "N'" + email + "'," + "N'" + address + "'," + "N'" + gender + "'," + "N'" + phoneNum + "'," + "N'" + dateBorn + "'," + "N'" + password + "'," + "N'" + isAdmin + "')";
+                    if (isAdmin == "on")
+                    {
+                        isAdmin = "True";
+                    } else
+                    {
+                        isAdmin = "False";
+                    }
+
+                    string sqlInsert = "INSERT INTO " + tableName + " VALUES ('" + userName + "'," + "N'" + email + "'," + "N'" + address + "'," + "N'" + gender + "'," + "N'" + phoneNum + "'," + "N'" + dateBorn + "'," + "N'" + color + "'," + "N'" + password + "'," + "N'" + isAdmin + "')";
                     // string sqlInsert = "INSERT INTO " + tableName + " VALUES ('" + userName + "'," + "N'" + password + "')";
                     Helper.doQuery(fileName, sqlInsert);
                     msg = "user was added to DB";
