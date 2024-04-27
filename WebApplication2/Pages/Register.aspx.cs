@@ -1,5 +1,6 @@
 ﻿using System;
 using WebApplication2.appStart;
+using WebApplication2.AppStart;
 
 namespace WebApplication2.Pages
 {
@@ -27,7 +28,7 @@ namespace WebApplication2.Pages
                     string address = Request.Form["inputAddress"];
                     string gender = Request.Form["inputGender"];
                     string phoneNum = Request.Form["inputPhone"];
-                    string dateBorn = Helper.fixDateFormat(Request.Form["inputDateBorn"]); 
+                    string dateBorn = Helper2.fixDateFormatSet(Request.Form["inputDateBorn"]); 
                     string password = Request.Form["inputPassword"];
                     string isAdmin = Request.Form["inputAdmin"];
 

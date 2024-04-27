@@ -11,7 +11,7 @@ namespace WebApplication2.Pages
 {
 
 
-    public partial class Management
+    public partial class Modify
     {
 
         /// <summary>

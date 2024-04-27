@@ -52,14 +52,5 @@ namespace WebApplication2.appStart
 
             return dt;
         }
-
-        public static String fixDateFormat(string date)
-        {
-            int year = int.Parse(date.Substring(6, 4));
-            int month = int.Parse(date.Substring(0, 2));
-            int day = int.Parse(date.Substring(3, 2));
-
-            return year + "-" + month + "-" + day;
-        }
     }
 }

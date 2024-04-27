@@ -78,6 +78,8 @@
     <Content Include="Pages\Logout.aspx" />
     <Content Include="Pages\Management.aspx" />
     <Content Include="Pages\Error.aspx" />
+    <Content Include="Pages\Modify.aspx" />
+    <Content Include="Scripts\Management.js" />
     <Content Include="Scripts\Welcome.js" />
     <Content Include="Scripts\Music.js" />
     <Content Include="Scripts\Register.js" />
@@ -107,6 +109,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStart\Helper2.cs" />
     <Compile Include="AppStart\Helper.cs" />
     <Compile Include="Pages\Credits.aspx.cs">
       <DependentUpon>Credits.aspx</DependentUpon>
@@ -285,6 +288,13 @@
     </Compile>
     <Compile Include="Pages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

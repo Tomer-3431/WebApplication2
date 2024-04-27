@@ -27,25 +27,25 @@
             </h3>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label class="form-label">User Name</label>
             <input name="inputUserName" type="Text" class="form-control" id="inputUserName" placeholder="CoolSkeleton95" maxlength="12">
             <label name="msgUserName" id="msgUserName" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputEmail" class="form-label">Email</label>
             <input name="inputEmail" type="email" class="form-control" id="inputEmail" placeholder="example@gmail.com" />
             <label name="msgEmail" id="msgEmail" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputAddress" class="form-label">Address</label>
             <input name="inputAddress" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
             <label name="msgAddress" id="msgAddress" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6" style="color: black;">
+        <div class="col-12" style="color: black;">
             <label for="inputGender" class="form-label" style="color: white;" >Gender</label>
             <select name="inputGender" id="inputGender" class="form-select" aria-label=".form-select example" >
                 <option selected="selected" value="0">Choose...</option>
@@ -57,14 +57,14 @@
             <label name="msgGender" id="msgGender" class="form-text" style="color: red;"></label>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputPhone" class="form-label">Phone Number</label>
             <input name="inputPhone" type="number" class="form-control" id="inputPhone" maxlength="10" placeholder="123456789" 
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
             <label name="msgPhone" id="msgPhone" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputDateBorn" class="form-label">Date Born</label>
             <div class="input-group date" id="datepicker">
                     <input name="inputDateBorn" id="inputDateBorn" type="text" class="form-control" placeholder="04/23/2024">
@@ -82,30 +82,30 @@
             <label name="msgDateBorn" id="msgDateBorn" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputPassword" class="form-label">Password</label>
             <input name="inputPassword" type="password" class="form-control" id="inputPassword" maxlength="12" placeholder="password1234">
             <label name="msgPassword" id="msgPassword" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12">
             <label for="inputPassword" class="form-label">Password Checker</label>
             <input name="inputPasswordCheck" type="password" class="form-control" id="inputPasswordCheck" maxlength="12" placeholder="password1234">
             <label name="msgPasswordCheck" id="msgPasswordCheck" class="form-text" style="color: red;"></label>
         </div>
 
-        <div class="col-md-12 mb-3">
+        <div class="col-12 mb-3">
             <button type="button" class="btn btn-secondary" id="showPasswordButton" onclick="showPassword();" style="color: black;"><i class="bi bi-eye-fill"></i>&nbsp;Show Password</button>
         </div>
 
-        <div class="col-md-12 mb-3 form-check checkList">
+        <div class="col-12 mb-3 form-check checkList">
           <input name="inputAdmin" class="form-check-input" type="checkbox" value="" id="inputAdmin">
           <label class="form-check-label" for="flexCheckDefault">
             check to be Admin
           </label>
         </div>
 
-        <div class="col-md-12 mb-3 form-check checkList">
+        <div class="col-12 mb-3 form-check checkList">
           <h3 class="form-label" style="font-weight: bold;">
             <% =msg %>
           </h3>

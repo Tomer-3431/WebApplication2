@@ -15,6 +15,7 @@ namespace WebApplication2.Pages
         {
             Session["rank"] = "guest";
             Session["userName"] = "guest";
+            Session["modify"] = "guest";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace WebApplication2.Pages
         {
             Session["rank"] = "guest";
             Session["userName"] = "guest";
+            Session["modify"] = "guest";
         }
 
         protected void Application_End(object sender, EventArgs e)
