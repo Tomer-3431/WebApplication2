@@ -15,6 +15,15 @@ namespace WebApplication2.Pages
     {
 
         /// <summary>
+        /// bDay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bDay;
+
+        /// <summary>
         /// music control.
         /// </summary>
         /// <remarks>

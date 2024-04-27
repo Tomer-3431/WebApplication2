@@ -6,7 +6,7 @@ namespace WebApplication2.Pages
 {
     public partial class Register : System.Web.UI.Page
     {
-        public string msg = "";
+        public string msg = "bdsh";
 
         protected void Page_Load(object sender, EventArgs e)
         {

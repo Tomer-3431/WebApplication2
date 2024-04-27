@@ -73,6 +73,10 @@
 
             </li>
 
+            <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Happy Birth Day!!" name="bDay" runat="server" id="bDay" style="color: white; text-align: center; top: 7px; position: relative; left: 40px;">
+                <img class="" src="../Images/birth%20day.png" style="max-block-size: 30px" />
+            </li>
+
           </ul>
 
             

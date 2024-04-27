@@ -18,7 +18,9 @@ namespace WebApplication2.Pages
                 DataTable table = Helper.executeDataTable(fileName, sqlSelect);
                 int length = table.Rows.Count;
                 if (length == 0)
+                {
                     msg = "wrong username or password or email";
+                }
                 else
                 {
                     string password = (string)(table.Rows[0]["password"]);
@@ -27,13 +29,14 @@ namespace WebApplication2.Pages
                     email = email.Trim();
                     if (password.Equals(Request.Form["inputPassword"]) && email.Equals(Request.Form["inputEmail"]))
                     {
-                        Application["Count"] = (int)Application["Coumt"] + 1;
+                        Application["Count"] = (int)Application["Count"] + 1;
                         Session["userName"] = Request.Form["inputUserName"];
                         if (Convert.ToBoolean(table.Rows[0]["isAdmin"]))
                         {
-                            Session["rank"] = "Admin";  
+                            Session["rank"] = "Admin";
                             Response.Redirect("Management.aspx");
-                        } else
+                        }
+                        else
                         {
                             Session["rank"] = "user";
                             Response.Redirect("Homepage.aspx");
