@@ -15,7 +15,8 @@
     flex-wrap: wrap;
     align-content: stretch;
     align-items: flex-start;
-    color: white;" runat="server">
+    color: white;" 
+    runat="server">
 
             <h1>
                 Login to the page 
@@ -90,11 +91,26 @@
             </tr>
             
             <tr>
-                <td></td> <td></td>
+                <td></td> 
+                <td>
+                    <lable id="forgotPassword" class="form-text" style="
+                        position: relative; 
+                        right: 80px;
+                        bottom: 10px;">
+                        <a href="Forgot_Password.aspx">forgot your password?</a>
+                    </lable>
+
+                </td>
                 <td>
                     <label id="msgPassword" class="form-text" style="color: red;"></label>
                 </td>
 
+            </tr>
+
+            <tr>
+                <td>
+                    
+                </td>
             </tr>
 
             <tr>
@@ -115,5 +131,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">
+    <!--
     <audio src="../Audio/Ghost Fight.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
+    -->
 </asp:Content>

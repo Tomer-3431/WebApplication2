@@ -18,7 +18,7 @@ namespace WebApplication2.Pages
                 DataTable table = Helper.executeDataTable(fileName, sqlSelect);
                 int length = table.Rows.Count;
                 if (length == 0)
-                    msg = "wrong username or password ir email";
+                    msg = "wrong username or password or email";
                 else
                 {
                     string password = (string)(table.Rows[0]["password"]);

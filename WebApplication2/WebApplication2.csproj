@@ -154,6 +154,7 @@
     <Content Include="Pages\Management.aspx" />
     <Content Include="Pages\Error.aspx" />
     <Content Include="Pages\Modify.aspx" />
+    <Content Include="Pages\Forgot_Password.aspx" />
     <Content Include="Scripts\Welcome.js" />
     <Content Include="Scripts\Music.js" />
     <Content Include="Scripts\Register.js" />
@@ -369,6 +370,13 @@
     </Compile>
     <Compile Include="Pages\Modify.aspx.designer.cs">
       <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Forgot_Password.aspx.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Forgot_Password.aspx.designer.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
