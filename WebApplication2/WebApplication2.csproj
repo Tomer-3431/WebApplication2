@@ -154,7 +154,6 @@
     <Content Include="Pages\Management.aspx" />
     <Content Include="Pages\Error.aspx" />
     <Content Include="Pages\Modify.aspx" />
-    <Content Include="Scripts\Management.js" />
     <Content Include="Scripts\Welcome.js" />
     <Content Include="Scripts\Music.js" />
     <Content Include="Scripts\Register.js" />
