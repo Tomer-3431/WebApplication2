@@ -109,7 +109,7 @@
 
             <div class="col-12 mb-3 form-check form-switch">
               <input <% =isAdmin %> name="inputAdmin" class="form-check-input" type="checkbox" id="inputAdmin" style="position: relative; left: 14px;" />
-              <label class="form-check-label" for="flexCheckDefault" style="position: relative; left: 14px;" >check to be Admin</label>
+              <label class="form-check-label" for="flexCheckDefault" style="position: relative; left: 14px;" >check to make Admin</label>
             </div>
 
             <div class="col-md-12 mb-3">
@@ -121,5 +121,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">
-    <audio src="../Audio/Dogsong.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
+    <audio src="../Audio/Spider%20Dance.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
 </asp:Content>

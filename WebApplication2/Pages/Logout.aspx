@@ -4,5 +4,4 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">
-        <audio src="../Audio/Hopes And Dreams.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
 </asp:Content>

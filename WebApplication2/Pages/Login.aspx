@@ -125,13 +125,19 @@
 
         </table>
     </form>
-    <h3>
-        <% =msg %>
-    </h3>
+    <div style="
+        color: white;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+        margin: 10px;
+        color: white;">
+        <h3>
+            <% =msg %>
+        </h3>
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">
-    <!--
     <audio src="../Audio/Ghost Fight.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
-    -->
 </asp:Content>

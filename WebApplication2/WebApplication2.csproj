@@ -93,9 +93,12 @@
     <Content Include="Audio\Power Of _NEO_.mp3" />
     <Content Include="Audio\sans..mp3" />
     <Content Include="Audio\SAVE The World.mp3" />
+    <Content Include="Audio\Song That Might Play When You Fight Sans.mp3" />
     <Content Include="Audio\Spear of Justice.mp3" />
     <Content Include="Audio\Spider Dance.mp3" />
     <Content Include="Audio\Determination.mp3" />
+    <Content Include="Audio\CORE.mp3" />
+    <Content Include="Audio\Metal Crusher.mp3" />
     <Content Include="Audio\Stronger Monsters.mp3" />
     <Content Include="Audio\st_him.mp3" />
     <Content Include="Audio\Anticipation.mp3" />
@@ -181,7 +184,7 @@
     <Content Include="Videos\Asgore destroys the mercy button.mp4" />
     <Content Include="Videos\Asriel breaks the barrier.mp4" />
     <Content Include="Videos\Full Sans Fight.mp4" />
-    <Content Include="Videos\True Credits.mp4" />
+    <Content Include="Videos\Undertale True Pacifist Ending .mp4" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

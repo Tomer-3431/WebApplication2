@@ -80,11 +80,6 @@ function calculateAge(dateBirth) {
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
-function getDateFromString(text) {
-    text = text.slice(0, 4) + ((parseInt(text[4]) + 1).toString()) + text.slice(-5);
-    return new Date(text);
-}
-
 function checkForm() {
     var msg = "";
     var fault = "";
@@ -115,7 +110,7 @@ function checkForm() {
     if (document.getElementById("inputDateBorn").value.length == 0) {
         msg = "Enter the date of your birth";
         fault = "DateBorn";
-    } else if (calculateAge(getDateFromString(document.getElementById("inputDateBorn").value)) <= 12) {
+    } else if (calculateAge(new Date(document.getElementById("inputDateBorn").value)) <= 12) {
         msg = "You must be at least 12 years old";
         fault = "DateBorn";
     }

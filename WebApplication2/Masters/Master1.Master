@@ -33,6 +33,9 @@
             <li id="management" style="display: none;"><a href="Management.aspx">Management</a></li>
             <li id="hello" style="text-align: center; color: white; top: 15px; left: 10px;">Welcome: <%=Session["userName"] %></li>
             <li id="rank" style="text-align: center; color: white; top: 15px; left: 32px;">Rank: <% = Session["rank"] %></li>
+            <li data-bs-toggle="tooltip" data-bs-placement="bottom" title="Happy Birth Day!!" name="bDay" runat="server" id="bDay" style="text-align: center; color: white; top: 10px; left: 54px;">
+                <img class="" src="../Images/birth%20day.png" style="max-block-size: 30px" />
+            </li>
           </ul>
             
           <form action="Login.aspx" id="login">

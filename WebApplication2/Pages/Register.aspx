@@ -28,12 +28,6 @@
             align-items: flex-start;
             color: white;">
 
-            <div>
-                <h3>
-                    <% =msg %>
-                </h3>
-            </div>
-
             <div class="row" style="margin-top: 20px">
                 <div class="col-md-6">
                     <label for="UserName" class="form-label">User name</label>
@@ -124,7 +118,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">
-    <!--
     <audio src="../Audio/Dummy!.mp3" autoplay="autoplay" loop="loop" controls style="max-height: 50px" id="audio"></audio>
-    -->
 </asp:Content>
