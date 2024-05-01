@@ -2,14 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="text" runat="server">
     <h1 style="color: white;">Home Page</h1>
-    <p style="color: white;">Hello and Welcome to my website.</p>
-    <p style="color: white;">My website is a wiki on the famous indie game Undertale.</p>
-    <p style="color: white;">I love the game a lot actully while writing this line I'm listening to the soundtrack of the game.</p>
-    <p style="color: white;">Feel free to go everywhere on the site, you can see to the right of the text there are links to every page of the wiki.</p>
-    <p style="color: white;">the left there will be sometimes images and / or videos of related things to the current page.</p>
-    <p style="color: white;">You can also register or log in in the log in button right up of the page.</p>
-    <p style="color: white;">Also evey page have a background music you can pause the music left to the log in button. There is a secret music to some of this pages lets see if you can guess the secret code.</p>
-    <p style="color: white;">Hope you will enjoy the website :)</p>
+    <div style="color: white;">
+        <p>Hello and Welcome to my website</p>
+        <p>This website is a wiki to one of my favorite games Undertale</p>
+        <p>To see all the pages of the wiki you will need to register and then log in to your account</p>
+        <p>There will be music playing in the background feel free to pause this, the music is diffrent to each website and the most feeting to the specific website.</p>
+        <p>In The footer there is info about me feel free to messege me in the ways shown</p>
+        <p>Link to the GitHub Repositery: <a href="https://github.com/Tomer-3431/WebApplication2"><i class="bi bi-github"></i></a></p>
+        <p style="margin-top: 50px">Hope you will enjoy the website and feel free to look there will be secrets :)</p>
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="music" runat="server">

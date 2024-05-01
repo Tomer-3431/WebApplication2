@@ -2,13 +2,13 @@
 var musicA = ["Home", "Memory", "Your Best Friend", "sans.", "Spear of Justice", "Death Bt Glamour"];
 var musicB = ["Undertale", "His Theme", "Your Best Nightmare", "MEGALOVANIA", "Battle Against A True Hero", "Power Of _NEO_"];
 
-var rng = Math.floor(100*Math.random()) + 1;
+var rng = Math.floor(100*Math.random());
 
 function changeSide() {
     
     if (document.getElementById("tape").src.includes("/Images/celeste%20tape%20A.png")) {
         document.getElementById("tape").src = "../Images/celeste tape B.png";
-        if (checkSideB() == 3 && rng == 100) {
+        if (checkSideB() == 3 && rng == 0) {
             document.getElementById("audio").src = "../Audio/" + "Song That Might Play When You Fight Sans" + ".mp3";
         } else {
             document.getElementById("audio").src = "../Audio/" + musicB[checkSideB()] + ".mp3";

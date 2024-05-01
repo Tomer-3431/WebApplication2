@@ -63,7 +63,7 @@ namespace WebApplication2.Pages
                 }
 
 
-                if (Request.Form["managementSubmit"] != null)
+                if (Request.Form["modifySubmit"] != null)
                 {
                     string sqlDelete = "DELETE FROM " + tableName + " WHERE userName = " + "'" + userName + "'";
                     msg = sqlDelete;

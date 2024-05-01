@@ -10,19 +10,6 @@ namespace WebApplication2.Pages
     {
         public string msg = "";
 
-        // public string userName = "";
-        // public string email = "";
-        // public string address = "";
-        // public byte selected = 0;
-        // public string[] gender = Helper2.genderArray(0);
-        // public string phoneNum = "";
-        // public DateTime dateBorn = new DateTime(2024, 04, 24);
-        // public string dateBornString = "";
-        // public string color = "";
-        // public string password = "";
-        // public string isAdmin = "";
-        // public bool isUserFound = false;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["rank"].ToString() != "Admin")
@@ -59,30 +46,6 @@ namespace WebApplication2.Pages
                             Session["modify"] = Request.Form["inputUserName"];
                             Response.Redirect("Modify.aspx");
                         }
-
-                        /*
-                        userName = Request.Form["inputUserName"];
-                        email = (string)(table.Rows[0]["email"]);
-                        address = (string)(table.Rows[0]["address"]);
-                        address = Helper2.fixAddress(address);
-                        selected = (byte)(table.Rows[0]["gender"]);
-                        gender = Helper2.selectGender(selected);
-                        phoneNum = (string)(table.Rows[0]["phoneNum"]);
-                        phoneNum.Trim();
-                        dateBorn = (DateTime)(table.Rows[0]["dateBorn"]);
-                        dateBornString = Helper2.fixDateFormat(dateBorn.ToString());
-                        color = (string)table.Rows[0]["color"];
-                        color.Trim();
-                        password = (string)(table.Rows[0]["password"]);
-                        password.Trim();
-                        if ((bool)(table.Rows[0]["isAdmin"])){
-                            isAdmin = "checked";
-                        } else
-                        {
-                            isAdmin = "";
-                        }
-                        isUserFound = true;
-                        */
                     }
                 }
             }

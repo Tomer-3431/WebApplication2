@@ -7,15 +7,6 @@ namespace WebApplication2.AppStart
 {
     public class Helper2
     {
-        public static String fixDateFormatSet(string date)
-        {
-            string year = date.Substring(6, 4);
-            string month = date.Substring(0, 2);
-            string day = date.Substring(3, 2);
-
-            return year + "-" + month + "-" + day;
-        }
-
         public static String fixDateFormatGet(string date)
         {
             string year = date.Substring(6, 4);
